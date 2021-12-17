@@ -8,18 +8,18 @@ long_description = 'Sample Package made for a demo \
 
 setup(
     name='cmd-service-pkg-andros98',
-    version='0.0.2',
-    author='Vibhu Agarwal',
-    author_email='vibhu4agarwal@gmail.com',
-    url='https://github.com/Vibhu-Agarwal/vibhu4gfg',
-    description='Demo Package for GfG Article.',
+    version='0.0.5',
+    author='Andrija Vojnovic',
+    author_email='andrija.vojnovic@cyberlab.rs',
+    url='https://github.com/cyberlabrs/my-commands-cli',
+    description='CLI for My Command Service.',
     long_description=long_description,
     long_description_content_type="text/markdown",
     license='MIT',
     packages=find_packages(),
     entry_points={
         'console_scripts': [
-            'gfg = command_service.main:main'
+            'mycmd = command_service.main:main'
         ]
     },
     classifiers=(
@@ -27,7 +27,7 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ),
-    keywords='geeksforgeeks gfg article python package vibhu4agarwal',
+    keywords='cyberlab my command  python package ',
     install_requires=requirements,
     zip_safe=False
 )

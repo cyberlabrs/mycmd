@@ -1,5 +1,6 @@
 import fire
 import requests
+import webbrowser
 
 
 def push(command: str, folder: str = "root"):
@@ -11,7 +12,7 @@ def push(command: str, folder: str = "root"):
             ERROR - push failed
     """
 
-    url = 'http://localhost:8000/commands/create-command'
+    url = 'http://my-commands.herokuapp.com/commands/create-command'
     new_command = {
         "content": command,
         "folder": folder,
@@ -21,9 +22,18 @@ def push(command: str, folder: str = "root"):
     return x.status_code
 
 
+def open():
+    """
+    Open My Commands repo
+    :return:
+    """
+    webbrowser.open('http://my-commands.herokuapp.com/commands', new=2)
+
+
 def main():
     fire.Fire({
-        "push": push
+        "push": push,
+        "open": open
     })
 
 
