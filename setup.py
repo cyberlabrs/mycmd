@@ -8,7 +8,7 @@ long_description = 'Sample Package made for a demo \
 
 setup(
     name='cmd-service-pkg-andros98',
-    version='0.0.7',
+    version='0.0.9',
     author='Andrija Vojnovic',
     author_email='andrija.vojnovic@cyberlab.rs',
     url='https://github.com/cyberlabrs/my-commands-cli',
