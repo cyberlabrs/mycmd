@@ -1,6 +1,5 @@
-fire==0.4.0
+fire
 six
-termcolor==1.1.0
-setuptools>=42
-wheel==0.37.0
-requests==2.26.0
+setuptools
+wheel
+requests

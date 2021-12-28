@@ -3,17 +3,18 @@ from setuptools import setup, find_packages
 with open('requirements.txt') as f:
     requirements = f.readlines()
 
-long_description = 'Sample Package made for a demo \
-      of its making for the GeeksforGeeks Article.'
+
+with open('README.md', 'r', 'utf-8') as f:
+    readme = f.read()
 
 setup(
-    name='cmd-service-pkg-andros98',
-    version='0.0.9',
+    name='mycmd',
+    version='0.0.1',
     author='Andrija Vojnovic',
     author_email='andrija.vojnovic@cyberlab.rs',
     url='https://github.com/cyberlabrs/my-commands-cli',
     description='CLI for My Command Service.',
-    long_description=long_description,
+    long_description=readme,
     long_description_content_type="text/markdown",
     license='MIT',
     packages=find_packages(),
