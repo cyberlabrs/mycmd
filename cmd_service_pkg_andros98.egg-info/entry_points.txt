@@ -1,3 +1,0 @@
-[console_scripts]
-mycmd = command_service.main:main
-

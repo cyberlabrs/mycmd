@@ -1,5 +1,0 @@
-fire
-six
-setuptools
-wheel
-requests
