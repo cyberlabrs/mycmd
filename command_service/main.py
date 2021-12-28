@@ -15,7 +15,7 @@ def push(command: str, f: str = "root", a: str = "cyberlab"):
         Message of success or error
     """
 
-    url = 'http://my-commands-backend.herokuapp.com/commands/'
+    url = 'http://adeaee94f5b244075afbab05906b0697-63726918.eu-central-1.elb.amazonaws.com/commands/'
     # url = "http://localhost:8000/commands/"
     new_command = {
         "content": command,
@@ -35,7 +35,7 @@ def get_all_folders():
     :return:
         List of all folders
     """
-    url = 'http://my-commands-backend.herokuapp.com/commands/folders'
+    url = 'http://adeaee94f5b244075afbab05906b0697-63726918.eu-central-1.elb.amazonaws.com/commands/folders'
     x = requests.get(url)
     folders = loads(x.content)
     if x.status_code == 200:
@@ -51,7 +51,7 @@ def get_all_commands_by_folder(folder: str):
     :return:
         List of all commands in specific folder
     """
-    url = f'http://my-commands-backend.herokuapp.com/commands/folder/{folder}'
+    url = f'http://adeaee94f5b244075afbab05906b0697-63726918.eu-central-1.elb.amazonaws.com/commands/folder/{folder}'
     x = requests.get(url)
     commands = loads(x.content)
     commands = [item['content'] for item in commands]
@@ -68,7 +68,7 @@ def search_commands(query: str):
     :return:
         List of commands which contain given query
     """
-    url = f'http://my-commands-backend.herokuapp.com/commands/search/{query}'
+    url = f'http://adeaee94f5b244075afbab05906b0697-63726918.eu-central-1.elb.amazonaws.com/commands/search/{query}'
     x = requests.get(url)
     commands = loads(x.content)
 
@@ -85,7 +85,7 @@ def get_all_commands():
     :return:
         Return all commands in repository
     """
-    url = f'http://my-commands-backend.herokuapp.com/commands/'
+    url = f'http://adeaee94f5b244075afbab05906b0697-63726918.eu-central-1.elb.amazonaws.com/commands/'
     x = requests.get(url)
     commands = loads(x.content)
     commands = [item['content'] for item in commands]
@@ -100,7 +100,7 @@ def open():
     Open My Commands repo
     :return:
     """
-    webbrowser.open('https://my-command.herokuapp.com/', new=2)
+    webbrowser.open('http://ad5d1e9d3493246468b36004ce9d1d54-210361326.eu-central-1.elb.amazonaws.com/', new=2)
 
 
 def main():
